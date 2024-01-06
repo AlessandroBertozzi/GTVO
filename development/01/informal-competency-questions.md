@@ -24,7 +24,7 @@ A list of disciplines.
 CQ_1.2
 
 ### Question
-Return the vocabulary name that contains the term `History`.
+Return the vocabulary name that contains the term `discipline_a`.
 
 ### Expected outcome
 The name of the vocabulary.
@@ -40,10 +40,10 @@ The name of the vocabulary.
 CQ_1.3
 
 ### Question
-Return all external entities to which the term `History` is connected.
+Return all external entities to which the term `discipline_a` is connected.
 
 ### Expected outcome
-A list of concepts connected with the selected term `History`.
+A list of concepts connected with the selected term `discipline_a`.
 
 ### Result
 * `close_external_entity_1`
@@ -60,10 +60,10 @@ A list of concepts connected with the selected term `History`.
 CQ_1.4
 
 ### Question
-Return external entities that are closely related to the term `History`.
+Return external entities that are closely related to the term `discipline_a`.
 
 ### Expected Outcome
-A list of concepts closely connected with the selected term `History`.
+A list of concepts closely connected with the selected term `discipline_a`.
 
 ### Result
 * `close_external_entity_1`
@@ -78,10 +78,10 @@ A list of concepts closely connected with the selected term `History`.
 CQ_1.5
 
 ### Question
-Return external entities that are closely related to the term `History`.
+Return external entities that are closely related to the term `discipline_a`.
 
 ### Expected Outcome
-A list of concepts exactly connected with the selected term `History`.
+A list of concepts exactly connected with the selected term `discipline_a`.
 
 ### Result
 * `exact_external_entity_1`
