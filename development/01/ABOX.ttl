@@ -1,0 +1,132 @@
+@prefix : <https://gotriple.eu/ontology/triple/cco#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <https://vocab.org/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <https://gotriple.eu/ontology/triple/cco#> .
+
+<https://gotriple.eu/ontology/triple/gtvo#> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty ;
+                rdfs:comment "A statement or formal explanation of the meaning of a concept."@en ;
+                rdfs:label "definition"@en ;
+                skos:definition <http://www.w3.org/2004/02/skos/core> .
+
+
+###  https://vocab.org/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:ObjectProperty ;
+                rdfs:comment "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property."@en ;
+                rdfs:isDefinedBy skos: ;
+                rdfs:label "has close match"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:closeMatch ;
+                rdfs:comment "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en ;
+                rdfs:isDefinedBy skos: ;
+                rdfs:label "has exact match"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies."@en ;
+                   rdfs:isDefinedBy skos: ;
+                   rdfs:label "has top concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty ;
+              rdfs:comment "Relates a resource (for example a concept) to a concept scheme in which it is included."@en ;
+              rdfs:isDefinedBy skos: ;
+              rdfs:label "is in scheme"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             rdfs:comment "An idea or notion; a unit of thought."@en ;
+             rdfs:isDefinedBy skos: ;
+             rdfs:label "Concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class ;
+                   rdfs:comment "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
+                   rdfs:isDefinedBy skos: ;
+                   rdfs:label "Concept Scheme"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://id.loc.gov/authorities/subjects/sh85061212
+<http://id.loc.gov/authorities/subjects/sh85061212> rdf:type owl:NamedIndividual ;
+                                                    rdfs:label "Library of Congress: history"@en .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#disciplines
+:disciplines rdf:type owl:NamedIndividual ,
+                      skos:ConceptScheme .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#history
+:history rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         skos:closeMatch <https://www.wikidata.org/wiki/Q5530932> ;
+         skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85061212> ,
+                         <https://www.wikidata.org/wiki/Q309> ;
+         skos:inScheme :disciplines .
+
+
+###  https://www.wikidata.org/wiki/Q309
+<https://www.wikidata.org/wiki/Q309> rdf:type owl:NamedIndividual ;
+                                     rdfs:label "Wikidata: history"@en .
+
+
+###  https://www.wikidata.org/wiki/Q5530932
+<https://www.wikidata.org/wiki/Q5530932> rdf:type owl:NamedIndividual ;
+                                         rdfs:label "Wikidata: gender history" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+skos:note rdfs:isDefinedBy skos: .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
