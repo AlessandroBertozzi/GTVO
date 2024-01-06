@@ -1,0 +1,155 @@
+@prefix : <http://www.semanticweb.org/aless/ontologies/2024/0/untitled-ontology-18/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.semanticweb.org/aless/ontologies/2024/0/untitled-ontology-18/> .
+
+<https://gotriple.eu/ontology/triple/gtvo#> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/spar/datacite/hasIdentifier
+<http://purl.org/spar/datacite/hasIdentifier> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/spar/datacite/usesIdentifierScheme
+<http://purl.org/spar/datacite/usesIdentifierScheme> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/spar/datacite/usesMetadataScheme
+<http://purl.org/spar/datacite/usesMetadataScheme> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:closeMatch .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/spar/datacite/Identifier
+<http://purl.org/spar/datacite/Identifier> rdf:type owl:Class .
+
+
+###  http://purl.org/spar/datacite/IdentifierScheme
+<http://purl.org/spar/datacite/IdentifierScheme> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             rdfs:label "Concept" .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class ;
+                   rdfs:label "Concept Scheme" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://gotriple.eu/ontology/triple/gtvo#close_external_entity_1
+:close_external_entity_1 rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:inScheme :disciplines .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#close_external_entity_2
+:close_external_entity_2 rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:inScheme :disciplines .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#close_external_entity_3
+:close_external_entity_3 rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:inScheme :disciplines .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#disc_098
+:disc_098 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/spar/datacite/Identifier> ;
+          <http://purl.org/spar/datacite/usesIdentifierScheme> :discpline_identifers .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#disc_345
+:disc_345 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/spar/datacite/Identifier> ;
+          <http://purl.org/spar/datacite/usesIdentifierScheme> :discpline_identifers .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#disc_567
+:disc_567 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/spar/datacite/Identifier> ;
+          <http://purl.org/spar/datacite/usesIdentifierScheme> :discpline_identifers .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#discipline_a
+:discipline_a rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              <http://purl.org/spar/datacite/hasIdentifier> :disc_345 ;
+              skos:closeMatch :close_external_entity_1 ,
+                              :close_external_entity_2 ,
+                              :close_external_entity_3 ;
+              skos:exactMatch :exact_external_entity_1 ,
+                              :exact_external_entity_5 ;
+              skos:inScheme :disciplines .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#discipline_b
+:discipline_b rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              <http://purl.org/spar/datacite/hasIdentifier> :disc_567 ;
+              skos:inScheme :disciplines .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#discipline_c
+:discipline_c rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              <http://purl.org/spar/datacite/hasIdentifier> :disc_098 ;
+              skos:inScheme :disciplines .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#disciplines
+:disciplines rdf:type owl:NamedIndividual ,
+                      skos:ConceptScheme .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#discpline_identifers
+:discpline_identifers rdf:type owl:NamedIndividual ,
+                               <http://purl.org/spar/datacite/IdentifierScheme> .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#exact_external_entity_1
+:exact_external_entity_1 rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:inScheme :disciplines .
+
+
+###  https://gotriple.eu/ontology/triple/gtvo#exact_external_entity_5
+:exact_external_entity_5 rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:inScheme :disciplines .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
