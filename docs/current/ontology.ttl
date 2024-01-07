@@ -1,0 +1,146 @@
+@prefix : <https://gotriple.eu/ontology/triple/gtvo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://gotriple.eu/ontology/triple/gtvo#> .
+
+<https://gotriple.eu/ontology/triple/gtvo#> rdf:type owl:Ontology ;
+                                             <http://purl.org/dc/terms/contributor> "Luca De Santis, Silvio Peroni" ;
+                                             <http://purl.org/dc/terms/creator> "Alessandro Bertozzi" ;
+                                             <http://purl.org/dc/terms/title> "GTVO" ;
+                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "gtvo" ;
+                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://gotriple.eu/ontology/triple/gtvo#" ;
+                                             rdfs:comment "The GoTriple platform is a data aggregator in the field of social sciences and humanities. As of January 2024, it gathers information from approximately 1300 different data sources. Given the vastness and diversity of these sources, there is a multitude of metadata available. For researchers, programmers, or general users, understanding the types and quantities of metadata available becomes almost impossible without a structured and organized vocabulary. In addition to the challenge of knowing which entities can be utilized for research purposes, another issue is identifying which of these entities correspond to those more widely used and recognized. This necessitates connecting individual units contained in a vocabulary with units in other, more widely disseminated and authoritative vocabularies." ;
+                                             rdfs:label "GoTriple Vocabulary Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:comment "A statement or formal explanation of the meaning of a concept."@en ;
+                                                 rdfs:label "definition"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core> .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/spar/datacite/hasIdentifier
+<http://purl.org/spar/datacite/hasIdentifier> rdf:type owl:ObjectProperty ,
+                                                       owl:InverseFunctionalProperty ;
+                                              rdfs:range <http://purl.org/spar/datacite/Identifier> ;
+                                              rdfs:comment "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en ;
+                                              rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+                                              rdfs:label "has identifier"@en .
+
+
+###  http://purl.org/spar/datacite/usesIdentifierScheme
+<http://purl.org/spar/datacite/usesIdentifierScheme> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://purl.org/spar/datacite/Identifier> ;
+                                                     rdfs:range <http://purl.org/spar/datacite/IdentifierScheme> ;
+                                                     rdfs:comment "An object property permitting specification of the identifier scheme used to provide the identifier for an entity – either a funder, a person or a resource – defined as an individual of the class datacite:IdentifierScheme."@en ;
+                                                     rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+                                                     rdfs:label "uses identifier scheme"@en .
+
+
+###  http://purl.org/spar/datacite/usesMetadataScheme
+<http://purl.org/spar/datacite/usesMetadataScheme> rdf:type owl:ObjectProperty ;
+                                                   rdfs:comment "The link between a metadata document and the scheme followed for creating metadata."@en ;
+                                                   rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+                                                   rdfs:label "uses metadata scheme"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:ObjectProperty ;
+                                                 rdfs:comment "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property."@en ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                                 rdfs:label "has close match"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#closeMatch> ;
+                                                 rdfs:comment "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                                 rdfs:label "has exact match"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:ObjectProperty ;
+                                                    rdfs:comment "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies."@en ;
+                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                                    rdfs:label "has top concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
+                                               rdfs:comment "Relates a resource (for example a concept) to a concept scheme in which it is included."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                               rdfs:label "is in scheme"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/spar/datacite/Identifier
+<http://purl.org/spar/datacite/Identifier> rdf:type owl:Class ;
+                                           rdfs:comment "An identifier that uniquely identities an entity belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+                                           rdfs:label "identifier"@en .
+
+
+###  http://purl.org/spar/datacite/IdentifierScheme
+<http://purl.org/spar/datacite/IdentifierScheme> rdf:type owl:Class ;
+                                                 rdfs:comment "The identifier scheme used to identify an entity such as a funding agency, a person or a resource. Individual schemes are defines as members of this class."@en ;
+                                                 rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+                                                 rdfs:label "identifier scheme"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              rdfs:comment "An idea or notion; a unit of thought."@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                              rdfs:label "Concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
+                                                    rdfs:comment "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
+                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                                    rdfs:label "Concept Scheme"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.w3.org/2004/02/skos/core#note> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
