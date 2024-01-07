@@ -3,26 +3,30 @@
 ## Question 1
 
 ### Identifier
-CQ_1.1
+CQ_2.1
 
 ### Question
-Return the ID of the `discipline_a`.
+Return the ID of the `term_a`.
 
 ### Expected Outcome
-A list of disciplines.
+An ID.
 
 ### Result
 * `disc_345`
+
+### Based on
+
+* Example 1
 
 ***
 
 ## Question 2
 
 ### Identifier 
-CQ_1.2
+CQ_2.2
 
 ### Question
-Return all the ids of the terms/concepts inside the `discipline vocabulary`.
+Return all the ids of the terms inside the `vocabulary_a`.
 
 ### Expected outcome
 A list of IDs.
@@ -31,6 +35,10 @@ A list of IDs.
 * `disc_345`
 * `disc_567`
 * `disc_098`
+
+### Based on
+
+* Example 1
 
 ***
 

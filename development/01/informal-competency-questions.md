@@ -6,15 +6,15 @@
 CQ_1.1
 
 ### Question
-Return a list of all the terms included in the `disciplines vocabulary`.
+Return a list of all the terms included in the `vocabulary_a`.
 
 ### Expected Outcome
-A list of disciplines.
+A list of terms.
 
 ### Result
-* `discipline_a`
-* `discipline_b`
-* `discipline_c`
+* `term_a`
+* `term_b`
+* `term_c`
 
 ***
 
@@ -24,7 +24,7 @@ A list of disciplines.
 CQ_1.2
 
 ### Question
-Return the vocabulary name that contains the term `discipline_a`.
+Return the vocabulary name that contains the term `term_a`.
 
 ### Expected outcome
 The name of the vocabulary.
@@ -40,17 +40,17 @@ The name of the vocabulary.
 CQ_1.3
 
 ### Question
-Return all external entities to which the term `discipline_a` is connected.
+Return all external entities to which the term `term_a` is connected.
 
 ### Expected outcome
-A list of concepts connected with the selected term `discipline_a`.
+A list of concepts connected with the selected term `term_a`.
 
 ### Result
-* `close_external_entity_1`
-* `close_external_entity_2`
-* `close_external_entity_3`
-* `exact_external_entity_1`
-* `exact_external_entity_5`
+* `close_external_term_1`
+* `close_external_term_2`
+* `close_external_term_3`
+* `exact_external_term_1`
+* `exact_external_term_5`
 
 ***
 
@@ -60,15 +60,15 @@ A list of concepts connected with the selected term `discipline_a`.
 CQ_1.4
 
 ### Question
-Return external entities that are closely related to the term `discipline_a`.
+Return external entities that are closely related to the term `term_a`.
 
 ### Expected Outcome
-A list of concepts closely connected with the selected term `discipline_a`.
+A list of concepts closely connected with the selected term `term_a`.
 
 ### Result
-* `close_external_entity_1`
-* `close_external_entity_2`
-* `close_external_entity_3`
+* `close_external_term_1`
+* `close_external_term_2`
+* `close_external_term_3`
 
 ***
 
@@ -78,11 +78,13 @@ A list of concepts closely connected with the selected term `discipline_a`.
 CQ_1.5
 
 ### Question
-Return external entities that are closely related to the term `discipline_a`.
+Return external entities that are closely related to the term `term_a`.
 
 ### Expected Outcome
-A list of concepts exactly connected with the selected term `discipline_a`.
+A list of concepts exactly connected with the selected term `term_a`.
 
 ### Result
-* `exact_external_entity_1`
-* `exact_external_entity_5`
+* `exact_external_term_1`
+* `exact_external_term_5`
+
+***

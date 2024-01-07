@@ -10,7 +10,7 @@ In addition to the challenge of knowing which entities can be utilized for resea
 
 Within GoTriple, a vocabulary is defined as a list of terms at the same level, meaning there is no hierarchical structure between the various terms. Each term can be connected to other terms, including those outside the currently used vocabularies, through two types of relationships: closely related and exactly related.
 ## Example 1
-`document_1` is classified as an article. The `article` type belongs to the `document typology vocabulary` and is linked to the `article` entity on `Wikidata`.
+`document_1` is classified as a `type_a`. The `type_a` type belongs to the `vocabulary_a` and is linked to the `term_456` entity on `Wikidata`.
 
 ## Example 2
-`document_456` was published in the disciplinary field of `History`. `History` belongs to the `disciplines vocabulary` and is linked to the `History` entity on both `Wikidata` and the `Library of Congress`.
+`document_456` was published in the disciplinary field of `discipline_a`. `discipline_a` belongs to the `vocabulary_b` and is linked to the `discipline_a` entity on both `Wikidata` and the `Library of Congress`.

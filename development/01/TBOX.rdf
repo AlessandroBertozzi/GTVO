@@ -86,87 +86,87 @@
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#close_external_entity_1 -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#close_external_term_1 -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#close_external_entity_1">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#close_external_term_1">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#disciplines"/>
+        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#close_external_entity_2 -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#close_external_term_2 -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#close_external_entity_2">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#close_external_term_2">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#disciplines"/>
+        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#close_external_entity_3 -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#close_external_term_3 -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#close_external_entity_3">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#close_external_term_3">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#disciplines"/>
+        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#discipline_a -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#term_a -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#discipline_a">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#term_a">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:closeMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#close_external_entity_1"/>
-        <skos:closeMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#close_external_entity_2"/>
-        <skos:closeMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#close_external_entity_3"/>
-        <skos:exactMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#exact_external_entity_1"/>
-        <skos:exactMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#exact_external_entity_5"/>
-        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#disciplines"/>
+        <skos:closeMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#close_external_term_1"/>
+        <skos:closeMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#close_external_term_2"/>
+        <skos:closeMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#close_external_term_3"/>
+        <skos:exactMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#exact_external_term_1"/>
+        <skos:exactMatch rdf:resource="https://gotriple.eu/ontology/triple/gtvo#exact_external_term_5"/>
+        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#discipline_b -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#term_b -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#discipline_b">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#term_b">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#disciplines"/>
+        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#discipline_c -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#term_c -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#discipline_c">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#term_c">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#disciplines"/>
+        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#disciplines -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#vocabulary_a -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#disciplines">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#exact_external_entity_1 -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#exact_external_term_1 -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#exact_external_entity_1">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#exact_external_term_1">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#disciplines"/>
+        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://gotriple.eu/ontology/triple/gtvo#exact_external_entity_5 -->
+    <!-- https://gotriple.eu/ontology/triple/gtvo#exact_external_term_5 -->
 
-    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#exact_external_entity_5">
+    <owl:NamedIndividual rdf:about="https://gotriple.eu/ontology/triple/gtvo#exact_external_term_5">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#disciplines"/>
+        <skos:inScheme rdf:resource="https://gotriple.eu/ontology/triple/gtvo#vocabulary_a"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
